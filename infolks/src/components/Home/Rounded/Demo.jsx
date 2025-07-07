@@ -1,6 +1,7 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { Draggable } from "gsap/Draggable";
+// import pkg from "gsap/Draggable.js";
+// const { Draggable } = pkg;
 import "./styles.css";
 import blackdot from "/home/icons/black-dot.svg";
 import quotes from "/home/icons/quotes.svg";
@@ -10,7 +11,8 @@ import Slider from "react-slick";
 import React from 'react';
 
 
-gsap.registerPlugin(Draggable);
+// gsap.registerPlugin(Draggable);
+
 
 const Carousel = () => {
   const carouselRef = useRef(null);
@@ -20,6 +22,16 @@ const Carousel = () => {
   const [isDisabled, setIsDisabled] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(true); // to prevent rapid clicks
 
+  useEffect(() => {
+  let Draggable;
+  import("gsap/Draggable").then(mod => {
+    Draggable = mod.default || mod.Draggable;
+    if (Draggable) {
+      gsap.registerPlugin(Draggable);
+      // You can now use Draggable here if needed
+    }
+  });
+  }, []);
 
   const data = [
     {
