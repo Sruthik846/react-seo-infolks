@@ -1,0 +1,39 @@
+.carousel-container-section {
+    position: relative;
+  }
+  
+  .carousel {
+    position: absolute;
+    left: calc(50% - 150px);
+    /* top: calc((100vh - 648px) / 3); */
+    transform-origin: 150px 2500px;
+    will-change: transform;
+  }
+  
+  .carousel .wrapper {
+    position: absolute;
+    transform-origin: 150px 2500px;
+  }
+  
+  .carousel .wrapper:active {
+    cursor: grabbing;
+  }
+  
+  .carousel .wrapper div {
+    border-radius: 16px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  }
+  
+  
+  /* Controls */
+  .carousel-controls {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* display: flex; */
+    gap: 10px;
+  }
+  
+  
+  
+

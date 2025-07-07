@@ -1,0 +1,37 @@
+@media only screen and (min-width: 1540px) and (max-width: 1627px) {
+  .conatiner-medium {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+@media only screen and (min-width: 1275px) and (max-width: 1627px) {
+  .conatiner-medium {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .letter-size {
+    font-size: 30px;
+    margin-top: -30px;
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1230px) {
+  .service-card {
+    margin-top: -85px !important;
+  }
+}
+
+@media only screen and (min-width: 1230px) and (max-width: 1400px) {
+  .service-cardlg {
+    margin-top: -110px !important;
+  }
+}
+
+/* @media only screen and (min-width: 1280px ) and (max-width: 1400px) {
+    .service-cardlg{
+        margin-top: -200px !important;
+    }
+} */

@@ -1,0 +1,14 @@
+#map .gm-style-moc {
+  display: none !important;
+  background-color: rgba(225, 16, 16, 0) !important;
+  pointer-events: none;
+  -webkit-transition: opacity ease-in-out;
+  transition: opacity ease-in-out;
+}
+.non-interactive {
+  pointer-events: none;
+}
+
+.interactive {
+  pointer-events: auto;
+}

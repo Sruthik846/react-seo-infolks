@@ -1,0 +1,19 @@
+.animate-card {
+    position: relative;
+    animation: MyDiv;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+  }
+  
+  @keyframes MyDiv {
+    0%   {left: 0px; top: 0px;}
+    100%  {left: 100px; top: 0px;}
+  }
+
+  .group:hover .path-fill {
+    fill: #0C9DFC; /* Change this to the desired hover color */
+  }
+
+  

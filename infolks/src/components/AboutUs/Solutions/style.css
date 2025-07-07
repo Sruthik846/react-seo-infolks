@@ -1,0 +1,21 @@
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .arrow-button:hover svg path {
+    fill: #ffffff; /* White arrow on hover */
+    stroke: #ffffff; 
+  }
+  
+  .arrow-button:hover svg circle {
+    stroke: #13B2F5;
+    fill: #13B2F5;  /* White border for the circle on hover */
+  }
+  

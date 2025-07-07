@@ -1,0 +1,64 @@
+:root{
+    --cards:10;
+    --cardHeight:500px;
+    --cardTopPadding:1.5em;
+    --cardMargin:4vw;
+}
+
+#servicecards{
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows : repeat(var(--cards),var(--cardHeight));
+    gap: var(--cardMargin);
+    padding-bottom: calc(var(--cards) * var(--cards));
+}
+
+#servicecard1{
+    --index:1
+}
+#servicecard2{
+    --index:1
+}
+#servicecard3{
+    --index:1
+}
+#servicecard4{
+    --index:1
+}
+#servicecard5{
+    --index:1
+}
+#servicecard6{
+    --index:1
+}
+#servicecard7{
+    --index:1
+}
+#servicecard8{
+    --index:1
+}
+#servicecard9{
+    --index:1
+}
+#servicecard10{
+    --index:1
+}
+
+.cardd{
+    position: sticky;
+    /* top: 150px; */
+    padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+.service-card-body{
+    box-sizing: border-box;
+    /* padding: 30px; */
+    border-radius: 50px;
+    height: var(--cardHeight);
+    /* border: 1px solid #dbdbdb; */
+}
+h2{
+    font-size: 2.5em;
+}

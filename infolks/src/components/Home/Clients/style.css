@@ -1,0 +1,46 @@
+@keyframes ticker-kf {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.img-ticker {
+  display: flex;
+  padding-left: 2.5rem;
+  width: max-content;
+  animation: ticker-kf var(--speed, 30s) linear infinite
+    var(--direction, forwards);
+}
+
+.img-ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-kf-opposite {
+  from {
+    transform: translateX(-50%);
+  }
+}
+.img-ticker-opposite {
+  display: flex;
+  padding-left: 2.5rem;
+  width: max-content;
+  animation: ticker-kf-opposite var(--speed, 30s) linear infinite
+    var(--direction, forwards);
+}
+.img-ticker-opposite:hover {
+  animation-play-state: paused;
+}
+
+/* Default state for images */
+.img-ticker img,
+.img-ticker-opposite img {
+  transition: filter 0.3s ease; /* Smooth transition for filter effects */
+  filter: grayscale(100%) contrast(0.4);
+}
+
+/* Hover state for images */
+.img-ticker img:hover,
+.img-ticker-opposite img:hover {
+  filter: grayscale(0%) contrast(1.5); /* Full color and increased contrast on hover */
+}

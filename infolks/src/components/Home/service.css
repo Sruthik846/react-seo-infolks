@@ -1,0 +1,15 @@
+.animate-card {
+  position: relative;
+  animation: MyDiv 3s ease-in-out;
+}
+
+@keyframes MyDiv {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

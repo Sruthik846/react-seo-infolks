@@ -1,0 +1,25 @@
+#media_presence .slick-track  {
+    display: flex !important;
+    gap: 1rem;
+    margin: 2px; /* Adjust gap size */
+    margin-left: -13px;
+    /* padding: 10px; */
+  }
+  #media_presence .slick-next {
+    right: -34px;
+}
+   #media_presence .slick-list {
+    padding: 10px;
+}
+
+  
+.shadow-outer-box-custom {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.shadow_custom{
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* 'custom': '0px 0px 4px 0px rgba(0, 0, 0, 0.19)',
+'outer-box-custom': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)', */

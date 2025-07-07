@@ -1,0 +1,20 @@
+@media only screen and (min-width: 1476px ) and (max-width: 1734px) {
+    .solution-img{
+        width: 300px;
+        height: 310px;
+    }
+}
+
+@media only screen and (min-width: 1266px ) and (max-width: 1476px) {
+    .solution-img{
+        width: 200px;
+        height: 210px;
+    }
+}
+
+@media only screen and (min-width: 1000px ) and (max-width: 1266px) {
+    .solution-img{
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,39 @@
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image {
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.slider-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.slider-control.left {
+  left: 1rem;
+}
+
+.slider-control.right {
+  right: 1rem;
+}

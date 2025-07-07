@@ -1,0 +1,20 @@
+.shape {
+  will-change: transform;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+
+  $shapes: ((#7f7de4, 418px), (#f79694, 285px), (#f5dd94, 178px));
+  $shape-index: 0;
+
+  @each $color, $size in $shapes {
+    $shape-index: $shape-index + 1;
+
+    &.shape-#{$shape-index} {
+      background: $color;
+      width: $size;
+      height: $size;
+      margin: calc(-1 * #{$size} / 2) 0 0 calc(-1 * #{$size} / 2);
+    }
+  }
+}

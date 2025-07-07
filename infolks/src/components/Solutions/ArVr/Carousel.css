@@ -1,0 +1,196 @@
+:root {
+  --ImgSizeX: 50vw;
+  --ImgSizeY: calc(var(--ImgSizeX) / 6 * 3);
+  --minFontSize: 10px;
+  --maxFontSize: 32px;
+  --scaler: 5vw;
+}
+
+main {
+  height: 100%;
+}
+
+#carousel {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: var(--ImgSizeY);
+}
+
+#carousel a {
+  position: absolute;
+  aspect-ratio: 6/3;
+  cursor: pointer;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+  opacity: 1;
+}
+
+#carousel a img {
+  transition: width 1s;
+}
+
+#carousel a.hideLeft {
+  left: -15%;
+  opacity: 0;
+  transform: translateY(50%) translateX(0%);
+}
+
+#carousel a.hideLeft img,
+#carousel a.hideRight img {
+  width: calc(var(--ImgSizeX) / 2);
+}
+
+#carousel a.hideRight {
+  left: 115%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-100%);
+}
+
+#carousel a.prevprevprevprevSecond {
+  z-index: 1;
+  left: 4%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  rotate: -5deg;
+}
+
+#carousel a.prevprevprevSecond {
+  z-index: 2;
+  left: 8%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  rotate: -5deg;
+}
+
+#carousel a.prevprevSecond {
+  z-index: 3;
+  left: 14%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  rotate: -5deg;
+}
+
+
+#carousel a.prevSecond {
+  z-index: 4;
+  left: 21%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  rotate: -5deg;
+}
+
+#carousel a.prev {
+  z-index: 5;
+  left: 28%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  rotate: -5deg;
+}
+
+#carousel a.selected {
+  z-index: 6;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+/* #carousel a.selected div{
+  height: 400px;
+} */
+
+#carousel a.next {
+  z-index: 5;
+  left: 42%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  rotate: 5deg;
+}
+
+#carousel a.nextSecond {
+  z-index: 4;
+  left: 48%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  /* opacity: 0.7; */
+  rotate: 7deg;
+}
+
+#carousel a.nextnextSecond {
+  z-index: 3;
+  left: 53%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  rotate: 7deg;
+}
+
+#carousel a.nextnextnextSecond {
+  z-index: 2;
+  left: 58%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  rotate: 7deg;
+}
+
+#carousel a.nextnextnextnextSecond {
+  z-index: 1;
+  left: 62%;
+  transform: translateY(0px) translateX(0%);
+  filter: blur(1px);
+  rotate: 7deg;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 3em;
+  border: none;
+  margin: auto;
+  margin-top: 0.5em;
+}
+
+.buttons button {
+  background: transparent;
+  border: inherit;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 2.5em;
+  height: 3em;
+}
+
+.left:hover polyline,
+.left:focus polyline,
+.right:hover polyline, 
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.left:active polyline,
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
+
+.swiper-3d .swiper-slide-shadow {
+  background: rgb(0 0 0 / 0%) !important;
+}
+
+/* Remove built-in Swiper 3D effect spacing for effect="cards" */
+/* .swiper .swiper-slide {
+  margin-left: 40px !important;
+  margin-right: 20px !important;
+} */
+
+.swiper {
+  width: 510px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.swiper-slide {
+  transform-origin: center right !important;
+  
+}
+

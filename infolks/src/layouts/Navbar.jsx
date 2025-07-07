@@ -973,7 +973,6 @@ const Navbar = () => {
   );
 };
 
-// eslint-disable-next-line react/prop-types
 const FlyoutLink = ({ children, href, FlyoutContent }) => {
   const [open, setOpen] = useState(false);
 
@@ -985,12 +984,12 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
       onMouseLeave={() => setOpen(false)}
       className="relative w-full h-fit font-primary-regular"
     >
-      <a
-        href={href}
-        className={`relative ${showFlyout ? "text-blue-700" : ""}`}
+      <span
+        // Use span instead of <a> to avoid nested <a>
+        className={`relative cursor-pointer ${showFlyout ? "text-blue-700" : ""}`}
       >
         {children}
-      </a>
+      </span>
       <AnimatePresence>
         {showFlyout && (
           <motion.div

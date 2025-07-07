@@ -1,0 +1,11 @@
+@layer {
+  .marquee-text-track {
+    animation: marquee-text-move 8s linear infinite;
+  }
+
+  @keyframes marquee-text-move {
+    to {
+      transform: translateY(-50%);
+    }
+  }
+}

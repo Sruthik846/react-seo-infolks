@@ -10,17 +10,23 @@
     "build": "npm run build:client && npm run build:server && node generate-static.js"
   },
   "dependencies": {
+    "@img-comparison-slider/react": "^8.0.2",
+    "@react-spring/web": "^10.0.1",
     "@tailwindcss/vite": "^4.1.11",
     "compression": "^1.8.0",
     "express": "^5.0.1",
     "framer-motion": "^12.19.2",
+    "gsap": "^3.13.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.3",
-    "sirv": "^3.0.1"
+    "react-slick": "^0.30.3",
+    "sirv": "^3.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
