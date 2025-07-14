@@ -8,6 +8,7 @@ const Report = ({ reportImage, content, content2, reportContent, reportid }) => 
   
     useEffect(() => {
       const updateCharLimit = () => {
+        if (typeof window !== "undefined") {
         if (window.innerWidth >= 1280) {
           // Extra large screens (xl)
           setCharLimit(380);
@@ -20,7 +21,7 @@ const Report = ({ reportImage, content, content2, reportContent, reportid }) => 
         } else {
           // Small screens and below (sm and xs)
           setCharLimit(152);
-        }
+        }}
       };
   
       // Initial check

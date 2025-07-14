@@ -19,6 +19,7 @@ const RecentProjects = () => {
 
   useEffect(() => {
     const updateTranslateValue = () => {
+      if (typeof window !== "undefined") {
       if (window.innerWidth >= 1280) {
         // Extra Large Screen (xl)
         setTranslateValue("86%");
@@ -28,7 +29,7 @@ const RecentProjects = () => {
       } else {
         // Default for smaller screens
         setTranslateValue("100%");
-      }
+      }}
     };
 
     // Set initial value

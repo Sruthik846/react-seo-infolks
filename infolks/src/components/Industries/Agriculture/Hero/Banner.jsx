@@ -13,6 +13,7 @@ const Banner = () => {
 
   useEffect(() => {
     const updateCharLimit = () => {
+      if (typeof window !== "undefined") {
       if (window.innerWidth >= 1280) {
         // Extra large screens (xl)
         setCharLimit(240);
@@ -25,7 +26,7 @@ const Banner = () => {
       } else {
         // Small screens and below (sm and xs)
         setCharLimit(60);
-      }
+      }}
     };
 
     // Initial check

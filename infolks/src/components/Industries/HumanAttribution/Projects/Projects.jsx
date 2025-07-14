@@ -18,6 +18,7 @@ const RecentProjects = () => {
   const [isTransitioning, setIsTransitioning] = useState(true); // Default to 80%
   useEffect(() => {
     const updateTranslateValue = () => {
+      if (typeof window !== "undefined") {
       if (window.innerWidth >= 1280) {
         // Extra Large Screen (xl)
         setTranslateValue("81%");
@@ -27,7 +28,7 @@ const RecentProjects = () => {
       } else {
         // Default for smaller screens
         setTranslateValue("100%");
-      }
+      }}
     };
 
     // Set initial value

@@ -111,6 +111,7 @@ const CardSlider = () => {
 
   useEffect(() => {
     const updatevisibleCards = () => {
+      if (typeof window !== "undefined") {
       if (window.innerWidth >= 1546) {
         // Extra large screens (xl)
         setVisibleCards(3);
@@ -123,7 +124,7 @@ const CardSlider = () => {
       } else {
         // Small screens and below (sm and xs)
         setVisibleCards(3);
-      }
+      }}
     };
 
     // Initial check

@@ -17,6 +17,7 @@ const RecentAnnotations = () => {
   const [isTransitioning, setIsTransitioning] = useState(true);
   useEffect(() => {
     const updateTranslateValue = () => {
+      if (typeof window !== "undefined") {
       if (window.innerWidth >= 1280) {
         // Extra Large Screen (xl)
         setTranslateValue("81%");
@@ -26,7 +27,7 @@ const RecentAnnotations = () => {
       } else {
         // Default for smaller screens
         setTranslateValue("100%");
-      }
+      }}
     };
 
     // Set initial value

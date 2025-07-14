@@ -21,6 +21,7 @@ const AnnotationUsecases = () => {
 
   useEffect(() => {
     const updateCharLimit = () => {
+      if (typeof window !== "undefined") {
       if (window.innerWidth >= 1280) {
         // Extra large screens (xl)
         setCharLimit(301);
@@ -33,7 +34,7 @@ const AnnotationUsecases = () => {
       } else {
         // Small screens and below (sm and xs)
         setCharLimit(162);
-      }
+      }}
     };
 
     // Initial check

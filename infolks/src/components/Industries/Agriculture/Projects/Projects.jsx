@@ -21,25 +21,29 @@ const RecentAnnotations = () => {
   const [isTransitioning, setIsTransitioning] = useState(true);
 
   useEffect(() => {
-    const updateTranslateValue = () => {
-      if (window.innerWidth >= 1280) {
-        // Extra Large Screen (xl)
+    const updateCharLimit = () => {
+      if (typeof window !== "undefined") {
+        const width = window.innerWidth;
+        if (width >= 1280) {
         setTranslateValue("86%");
-      } else if (window.innerWidth >= 1024) {
-        // Large Screen (lg)
+      } else if (width >= 1024) {
         setTranslateValue("100%");
       } else {
-        // Default for smaller screens
         setTranslateValue("100%");
+      }
       }
     };
 
-    // Set initial value
-    updateTranslateValue();
+    // Initial check
+    updateCharLimit();
 
-    // Update on window resize
-    window.addEventListener("resize", updateTranslateValue);
-    return () => window.removeEventListener("resize", updateTranslateValue);
+    // Add event listener
+    window.addEventListener("resize", updateCharLimit);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", updateCharLimit);
+    };
   }, []);
 
   const data = [

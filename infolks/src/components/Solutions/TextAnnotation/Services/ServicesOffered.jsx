@@ -123,6 +123,24 @@ const ServicesOffered = () => {
     setShowAll(!showAll);
   };
 
+  const [screenWidth, setScreenWidth] = useState(0);
+
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    const updateWidth = () => setScreenWidth(window.innerWidth);
+    updateWidth(); // Set initial value
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }
+}, []);
+
+const getSlideImage = (slide) => {
+  if (screenWidth >= 1728) return slide.imageUrl;
+  if (screenWidth >= 1024) return slide.imageUrlTab;
+  return slide.imageUrlMobile; // or imageUrlTab if mobile version not available
+};
+
+
   return (
     <section className="lg:mt-20 mt-5 mb-10 lg:mb-20 xl:-mb-16 2xl:mb-20 relative font-primary-regular">
       <div className="text-[#37508A] flex flex-col justify-center items-center">
@@ -162,14 +180,9 @@ const ServicesOffered = () => {
                 <div
                   className="absolute inset-0 h-full w-full overflow-hidden bg-no-repeat xl:bg-cover 2xl:bg-contain lg:bg-cover rounded-[10px]"
                   style={{
-                    backgroundImage: `url(${
-                      window.innerWidth >= 1728
-                        ? slide.imageUrl
-                        : window.innerWidth >= 1024
-                        ? slide.imageUrlTab
-                        : slide.imageUrlTab
-                    })`,
-                  }}
+  backgroundImage: `url(${getSlideImage(slide)})`,
+}}
+
                 >
                   <div className="absolute inset-0 bg-black/50 rounded-[10px]"></div>
                 </div>

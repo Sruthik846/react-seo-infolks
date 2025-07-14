@@ -87,6 +87,7 @@ const AnnotationUsecases = () => {
 
   useEffect(() => {
     const updateTranslateValue = () => {
+      if (typeof window !== "undefined") {
       if (window.innerWidth >= 1733) {
         // Large devices (lg breakpoint)
         setTranslateXValue(-currentIndex * 64.4); // Adjust value as needed
@@ -99,7 +100,7 @@ const AnnotationUsecases = () => {
       } else {
         // Small & medium devices
         setTranslateXValue(-currentIndex * 82.9);
-      }
+      }}
     };
 
     updateTranslateValue();

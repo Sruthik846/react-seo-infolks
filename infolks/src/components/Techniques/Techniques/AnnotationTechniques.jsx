@@ -292,6 +292,7 @@ const AnnotationTechniques = () => {
   // Handle window resize to update slidesToShow
   useEffect(() => {
     const handleResize = () => {
+      if (typeof window !== "undefined") {
       if (window.innerWidth >= 1274) {
         setSlidesToShow(4);
       } else if (window.innerWidth >= 1024) {
@@ -300,7 +301,7 @@ const AnnotationTechniques = () => {
         setSlidesToShow(2);
       } else {
         setSlidesToShow(1);
-      }
+      }}
     };
 
     handleResize();

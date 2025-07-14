@@ -140,6 +140,7 @@ const Usecases = () => {
 
   useEffect(() => {
     const updateTranslateValue = () => {
+      if (typeof window !== "undefined") {
       if (window.innerWidth >= 1733) {
         // Large devices (lg breakpoint)
         setTranslateXValue(-currentIndex * 70.1); // Adjust value as needed
@@ -152,7 +153,7 @@ const Usecases = () => {
       } else {
         // Small & medium devices
         setTranslateXValue(-currentIndex * 85.8);
-      }
+      }}
     };
 
     updateTranslateValue();
